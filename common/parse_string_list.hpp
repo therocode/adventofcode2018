@@ -7,7 +7,7 @@ namespace cexp
 template <size_t capacity>
 constexpr array<std::string_view, capacity> parse_string_list(std::string_view str)
 {
-    array<std::string_view, capacity> result;
+    array<std::string_view, capacity> result{};
 
     const char* start = str.data();
     const char* end = start + str.size();
